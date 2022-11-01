@@ -10,7 +10,7 @@ import { useQuery } from 'villus';
 import {computed, defineComponent,ref } from 'vue';
 import FavAnimeitem from '../cards/FavAnimeitem.vue';
 import Searchvue from '../search/Search.vue';
-import { favAnime } from '../../types/interfaces';
+import { Anime, Fav } from '../../types/interfaces';
 import { FAVORITESANINE } from '../../types/querys';
 
 
@@ -18,7 +18,7 @@ export default defineComponent({
    
     setup() {
          const search=ref<string>("")      
-         const { data } = useQuery<favAnime>({
+         const { data } = useQuery<Fav<Anime>>({
             query: FAVORITESANINE
         });
         

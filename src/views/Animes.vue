@@ -10,7 +10,7 @@ import { useQuery } from 'villus';
 import {computed, defineComponent,ref } from 'vue';
 import Animeitem from '../components/cards/Animeitem.vue';
 import Searchvue from '../components/search/Search.vue';
-import {AnimesList } from '../types/interfaces';
+import {Anime, ListItems } from '../types/interfaces';
 import { GETANIMES } from '../types/querys';
 
 
@@ -18,15 +18,15 @@ export default defineComponent({
    
     setup() {
          const search=ref<string>("")      
-         const { data } = useQuery<AnimesList>({
+         const { data } = useQuery<ListItems<Anime>>({
             query: GETANIMES
         });
         
            const animes= computed(()=>{
              if(search.value){
-                 return data.value?.Animes.filter((anime)=>anime.title.toLowerCase().includes(search.value.toLowerCase()))
+                 return data.value?.Items.filter((anime)=>anime.title.toLowerCase().includes(search.value.toLowerCase()))
              }else{
-                 return data.value?.Animes
+                 return data.value?.Items
              }
          })
         

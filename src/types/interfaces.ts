@@ -1,11 +1,6 @@
 
-
-export interface MangasList {
-    Mangas: Manga[];
-}
-
-export interface AnimesList{
-    Animes: Anime[]
+export interface ListItems<T> {
+    Items: T[];
 }
 
 export interface getAnime{
@@ -16,15 +11,11 @@ export interface conManga{
     getManga:Manga
 }
 
-export interface favAnime{
-    Favorites:Anime[]
+export interface Fav<T>{
+    Favorites:T[]
 }
 
-export interface favManga{
-    Favorites:Manga[]
-}
-
-export interface Manga{
+export interface Item{
     _id:string,
     title:string,
     cover:string,
@@ -34,14 +25,12 @@ export interface Manga{
     favorite?:boolean
 }
 
-export interface Anime{
-    _id:string,
-    title:string,
-    cover:string,
-    description:string,
-    genre?:string,
-    rank:string,
-    favorite?:boolean
+export interface Manga extends Item{
+   
+}
+
+export interface Anime extends Item{
+    
 }
 
 export interface Entry{
