@@ -32,12 +32,12 @@
 <script setup lang="ts">
 import { useMutation, useQuery } from 'villus';
 import { useRoute } from 'vue-router';
-import { conManga } from '../types/interfaces';
+import {getItem, Manga } from '../types/interfaces';
 import { ADDFAVORITE, GETMANGA } from '../types/querys';
 
    
    const route=useRoute();
-   const {data}=useQuery<conManga>({
+   const {data}=useQuery<getItem<Manga>>({
        query:GETMANGA,
        variables:{id:route.params.id}
    })
@@ -49,7 +49,7 @@ import { ADDFAVORITE, GETMANGA } from '../types/querys';
         }
          const addfavorite=()=>{
            execute(variables)
-           alert(`${data.value?.getManga.title} add favorites`)
+           alert(`${data.value?.getItem.title} add favorites`)
         }
 
 </script>

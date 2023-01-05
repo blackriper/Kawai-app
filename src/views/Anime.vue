@@ -33,14 +33,14 @@
 import { useMutation, useQuery } from 'villus';
 import { defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
-import { getAnime } from '../types/interfaces';
+import { Anime,getItem } from '../types/interfaces';
 import { ADDFAVORITE, GETANIME } from '../types/querys';
 
 export default defineComponent({
     setup() {
         const route = useRoute();
         //query data anime
-        const { data } = useQuery<getAnime>({
+        const { data } = useQuery<getItem<Anime>>({
             query: GETANIME,
             variables: { id: route.params.id }
         })
@@ -52,7 +52,7 @@ export default defineComponent({
         }
         const addfavorite=()=>{
            execute(variables)
-           alert(`${data.value?.getAnime.title} add favorites`)
+           alert(`${data.value?.getItem.title} add favorites`)
         }
 
         return { data,addfavorite }

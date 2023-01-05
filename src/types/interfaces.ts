@@ -3,13 +3,10 @@ export interface ListItems<T> {
     Items: T[];
 }
 
-export interface getAnime{
-    getAnime:Anime
+export interface getItem<T>{
+    getItem:T
 }
 
-export interface conManga{
-    getManga:Manga
-}
 
 export interface Fav<T>{
     Favorites:T[]
@@ -25,13 +22,11 @@ export interface Item{
     favorite?:boolean
 }
 
-export interface Manga extends Item{
+export type Manga=Item;
    
-}
-
-export interface Anime extends Item{
+export type Anime=Item;
     
-}
+
 
 export interface Entry{
     title:string,
