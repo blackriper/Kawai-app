@@ -2,39 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer base{
    .link{
-    @apply text-white block p-5 font-bold hover:text-yellow-500
+      @apply text-white block p-5 font-bold hover:text-yellow-500
    }
+
    .bar{
       @apply bg-gray-500 flex justify-between lg:justify-start items-center
    }
    .menu_mobile{
       @apply w-full absolute z-50 left-0 text-center bg-gray-500
    }
-   .search{
-      @apply shadow appearance-none border rounded w-3/4 lg:w-1/4 p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out
-   }
-   .favorite{
-      @apply bg-transparent hover:bg-purple-900 text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-   }
+     
    .delfavorite{
       @apply bg-red-600 hover:bg-purple-900 text-white hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
    }
    .navfavorite{
       @apply bg-sky-400 hover:bg-yellow-500 rounded-md shadow-md font-bold p-3
    }
-   .entry{
-      @apply mt-5 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-      focus:outline-none focus:border-purple-900 focus:ring-1 focus:ring-purple-900
-      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-      invalid:border-red-500 invalid:text-red-600
-      focus:invalid:border-red-500 focus:invalid:ring-red-500
-   }
-   .combo-box{
-        @apply appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700
-        bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out
-        m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none
-   }
+   
+
+}
+
+@layer components{
+
+/*component Card*/
+ .header-card{
+   @apply flex items-start space-x-6 p-6 bg-gray-100 mt-3 shadow-md
+ }
+
+ .card-image{
+   @apply flex-none rounded-md bg-slate-100
+ }
+  
+ .card-body{
+   @apply min-w-0 relative flex-auto
+ }
+ .card-title{
+   @apply font-semibold text-slate-900 truncate pr-20 text-sm
+ }
+
+
+/* end component Detail*/
+.detail-container{
+   @apply container mx-auto flex flex-col md:flex-row justify-center my-12 md:my-24
+}
+
+.detail-cover{
+  @apply rounded-none lg:rounded-lg shadow-2xl
+}
+
+.detail-genre-container{
+   @apply top-0 right-0 mt-5 flex items-center gap-4 space-x-1
+}
+
+.detail-breadcrumb{
+   @apply bg-sky-400 rounded-md shadow-md font-bold p-3
+}
+
+.detail-description{
+   @apply leading-normal mb-4 text-lg text-justify
+}
+
+.favorite{
+      @apply bg-transparent hover:bg-purple-900 text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+ }
+/*component Detail*/
+
+/*component Search*/
+.search{
+   @apply shadow appearance-none border rounded w-3/4 lg:w-1/4 p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out
+} 
+/*component Search*/
+
+/*component FormData*/
+.entry{
+   @apply mt-5 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+   focus:outline-none focus:border-purple-900 focus:ring-1 focus:ring-purple-900
+   disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+   invalid:border-red-500 invalid:text-red-600
+   focus:invalid:border-red-500 focus:invalid:ring-red-500
+}
+.combo-box{
+     @apply appearance-none block w-full px-3 py-1.5 mt-5 text-base font-normal text-gray-700
+     bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out
+     m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none
+}
+
+/*component FormData*/
+
 
 }
