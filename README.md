@@ -46,15 +46,15 @@ al dar click en alguno de los generos se redirecciona a una lista de animes y ma
 ## Nuevo anime y manga
 ambos formularios son el mismo componente solo que en animes nos permite seleccionar los nombres de las secuelas y precuelas.
 
-![Nuevo Manga](assets/nuevo_manga.png)
+![Nuevo Manga](assets/nuevo_manga.PNG)
 
-![Nuevo Manga](assets/nuevo_manga.png)
+![Nuevo Manga](assets/nuevo_manga.PNG)
 
 
 ## Home 
 muestra los favoritos seleccionados con anterioridad en detalles tambien permite borrarlos de favoritos
 
-![Home](assets/home.png)
+![Home](assets/home.PNG)
 
 
 ## Iniciar servidor de desarrollo 
