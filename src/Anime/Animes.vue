@@ -8,7 +8,7 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router';
 import Card from '../components/Card/Card.vue';
-import Search from '../components/search/Search.vue';
+import Search from '../components/Search/Search.vue';
 import { Name } from '../types';
 import { useAnime } from './composables/useAnime';
 
